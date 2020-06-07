@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Therapist</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <style>
+*
+</style> -->
+ <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>
+
+
+</head>
+<body>
+<div class="container">
+    <div class="content" align="center">
+        <h1 align="center" color="white">AI THERAPIST</h1>
+        <h3 align="center" color="white">Discovering people emotions and feelings........</h3>
+        <h2 align="center"><font color="white" face="Times New Roman">HOW     WAS     YOUR     DAY  ?</font></h2>
+            <form action="/polls/finduser/" method="post">{% csrf_token %}
+                <textarea name="name"  class="form-control"  placeholder="Write your thoughts here..." id="t1" width="100%" rows="2" cols="100" ></textarea>
+                <br><button class="btn btn-success btn-lg" type="submit" class="btn" >Submit</button>
+            </form>
+    </div>
+</div>
+</body>
+</html>
